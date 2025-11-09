@@ -1,8 +1,7 @@
 import "./index.css";
 import WeatherUI from "./weatherUI";
+import AudioController from "./audioController";
 
-class AudioController {
 
-};
 
 new WeatherUI(new AudioController());
