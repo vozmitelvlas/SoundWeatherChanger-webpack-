@@ -12,6 +12,11 @@ export default class WeatherUI {
                 this.handleClick(widget)
             )
         );
+
+        const volumeSLider = document.querySelector('#volume-slider');
+        volumeSLider?.addEventListener('input', () => {
+            this.handleVolumeChange(volumeSLider.value);
+        });
     };
 
     handleClick(weatherWidget) {
@@ -22,7 +27,7 @@ export default class WeatherUI {
         this.audioController.play(this.weatherType);
     };
 
-    handleVolumeChange(/*value*/) {
-        //this.audioController.setVolume(value);
+    handleVolumeChange(value) {
+        this.audioController.setVolume(parseFloat(value));
     };
 };
