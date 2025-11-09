@@ -19,7 +19,7 @@ export default class WeatherUI {
         this.weatherType = weatherWidget.dataset.weather;
         document.body.className = `${this.weatherType}-bg`;
         weatherWidget.classList.add('clicked');
-        // this.audioController.play(this.weatherType);
+        this.audioController.play(this.weatherType);
     };
 
     handleVolumeChange(/*value*/) {
